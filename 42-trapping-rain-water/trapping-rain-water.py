@@ -3,17 +3,19 @@ class Solution:
         if not height:
             return 0
         l,r=0,len(height)-1
-        leftMax,rightMax=height[l],height[r]
+        maxLeft,maxRight=height[l],height[r]
         res=0
         while l<r:
-            if leftMax<rightMax:
+            if maxLeft<maxRight:
                 l+=1
-                leftMax=max(height[l],leftMax)
-                res+=leftMax-height[l]
+                maxLeft=max(height[l],maxLeft)
+                res+=maxLeft-height[l]
             else:
                 r-=1
-                rightMax=max(height[r],rightMax)
-                res+=rightMax-height[r]
+                maxRight=max(height[r],maxRight)
+                res+=maxRight-height[r]
         return res
+
+
 
         
