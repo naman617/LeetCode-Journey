@@ -22,3 +22,4 @@ class Solution:
             copy.random=oldToCopy[cur.random]
             cur=cur.next
         return oldToCopy[head]
+        
