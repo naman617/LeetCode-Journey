@@ -8,8 +8,7 @@ class Solution:
                 return
             grid[r][c]='0'
             for dr,dc in directions:
-                dfs(r+dr,c+dc)
-        
+                dfs(dr+r,dc+c)
         for r in range(ROWS):
             for c in range(COLS):
                 if grid[r][c]=='1':
