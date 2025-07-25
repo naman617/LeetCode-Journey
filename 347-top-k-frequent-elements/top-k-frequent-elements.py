@@ -12,3 +12,4 @@ class Solution:
         for i in range(k):
             res.append(heapq.heappop(heap)[1])
         return res
+        
