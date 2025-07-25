@@ -3,8 +3,8 @@ class Solution:
         preMap={i:[] for i in range(numCourses)}
         for crs,pre in prerequisites:
             preMap[crs].append(pre)
-        visited,visiting=set(),set()
-        output=[]
+        visiting,visited=set(),set()
+        res=[]
         def dfs(crs):
             if crs in visiting:
                 return False
@@ -16,13 +16,10 @@ class Solution:
                     return False
             visiting.remove(crs)
             visited.add(crs)
-            output.append(crs)
+            res.append(crs)
             return True
-        for c in range(numCourses):
-            if not dfs(c):
+        for i in range(numCourses):
+            if not dfs(i):
                 return []
-        return output
-        
-
-
+        return res
         
