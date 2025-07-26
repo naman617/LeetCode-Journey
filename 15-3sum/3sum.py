@@ -8,10 +8,10 @@ class Solution:
             l,r=i+1,len(nums)-1
             while l<r:
                 threeSum=a+nums[l]+nums[r]
-                if threeSum>0:
-                    r-=1
-                elif threeSum<0:
+                if threeSum<0:
                     l+=1
+                elif threeSum>0:
+                    r-=1
                 else:
                     res.append([a,nums[l],nums[r]])
                     l+=1
