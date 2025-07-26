@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack=[]
-        closeToOpen={'}':'{',']':'[',')':'('}
+        closeToOpen={')':'(',']':'[','}':'{'}
         for c in range(len(s)):
             if s[c] in closeToOpen:
                 if stack and stack[-1]==closeToOpen[s[c]]:
@@ -11,5 +11,4 @@ class Solution:
             else:
                 stack.append(s[c])
         return True if not stack else False
-
         
