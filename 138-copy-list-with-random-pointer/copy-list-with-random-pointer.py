@@ -9,8 +9,8 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        oldToCopy={None:None}
         cur=head
+        oldToCopy={None:None}
         while cur:
             copy=Node(cur.val)
             oldToCopy[cur]=copy
