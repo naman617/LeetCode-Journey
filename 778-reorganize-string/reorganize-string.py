@@ -3,11 +3,11 @@ class Solution:
         count=Counter(s)
         maxHeap=[[-cnt,char] for char,cnt in count.items()]
         heapq.heapify(maxHeap)
+        res=''
         prev=None
-        res=""
         while maxHeap or prev:
-            if not maxHeap and prev:
-                return ""
+            if prev and not maxHeap:
+                return ''
             cnt,char=heapq.heappop(maxHeap)
             res+=char
             cnt+=1
